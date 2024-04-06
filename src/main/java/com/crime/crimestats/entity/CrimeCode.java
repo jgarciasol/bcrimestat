@@ -15,4 +15,10 @@ public class CrimeCode {
     public String getDescription(){
         return description;
     }
+    public void setCrimeCodeName(String crimeCodeName){
+        this.crimeCodeName = crimeCodeName;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

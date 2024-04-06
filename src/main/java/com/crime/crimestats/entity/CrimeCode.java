@@ -21,4 +21,7 @@ public class CrimeCode {
     public void setDescription(String description) {
         this.description = description;
     }
+    public void setCrimeCodeId(Long crimeCodeId){
+        this.crimeCodeId = crimeCodeId;
+    }
 }

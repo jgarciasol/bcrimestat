@@ -1,5 +1,4 @@
 package com.crime.crimestats.repository;
-
 import com.crime.crimestats.entity.CrimeCode;
 import java.util.List;
 public interface CrimeCodeDao {

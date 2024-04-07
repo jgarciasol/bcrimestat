@@ -16,11 +16,10 @@ public class CrimeCodeDaoImpl implements CrimeCodeDao {
     private final String FIND_CRIME_CODE_ID = "select * from crimecode where crimecodeid = ?";
 
     public class CrimeCodeMapper implements RowMapper<CrimeCode>{
-
         @Override
         public CrimeCode mapRow(ResultSet rs, int rowNum) throws SQLException {
             CrimeCode crimeCode = new CrimeCode();
-            crimeCode.setCrimeCodeId(rs.getLong("CrimeCodeID"));
+            crimeCode.setCrimeCodeId(rs.getLong("CrimecodeID"));
             crimeCode.setCrimeCodeName(rs.getString("Crimecodename"));
             crimeCode.setDescription(rs.getString("Description"));
             return crimeCode;

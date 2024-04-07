@@ -33,6 +33,6 @@ public class CrimeCode {
 
     @Override
     public String toString() {
-        return "Crime{id=%d, crime=%s description=%s}".formatted(crimeCodeId, crimeCodeName, description);
+        return "Crime{id=%d, crime=%s, description=%s}".formatted(crimeCodeId, crimeCodeName, description);
     }
 }

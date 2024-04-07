@@ -12,6 +12,8 @@ import java.util.List;
 @Repository
 public class CrimeCodeDaoImpl implements CrimeCodeDao {
     private JdbcTemplate jdbcTemplate;
+    private final String FIND_CRIME_CODE = "select * from crimecode";
+    private final String FIND_CRIME_CODE_ID = "select * from crimecode where crimecodeid = ?";
 
     public class CrimeCodeMapper implements RowMapper<CrimeCode>{
 
@@ -28,13 +30,13 @@ public class CrimeCodeDaoImpl implements CrimeCodeDao {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-
     @Override
     public List<CrimeCode> getAllCrimeCodes() {
-        return null;
+        return jdbcTemplate.query(FIND_CRIME_CODE, new CrimeCodeMapper());
     }
     @Override
     public CrimeCode getCrimeCodeById(Long id) {
-        return null;
+        return jdbcTemplate.queryForObject(FIND_CRIME_CODE_ID, new CrimeCodeMapper(), id);
+        // return null;
     }
 }

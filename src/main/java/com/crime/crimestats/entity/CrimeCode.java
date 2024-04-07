@@ -6,6 +6,12 @@ public class CrimeCode {
     private String crimeCodeName;
     private String description;
 
+    public CrimeCode(){}
+    public CrimeCode(Long crimeCodeId, String crimeCodeName, String description){
+        this.crimeCodeId = crimeCodeId;
+        this.crimeCodeName = crimeCodeName;
+        this.description = description;
+    }
     public Long getCrimeCodeId(){
         return crimeCodeId;
     }
@@ -23,5 +29,10 @@ public class CrimeCode {
     }
     public void setCrimeCodeId(Long crimeCodeId){
         this.crimeCodeId = crimeCodeId;
+    }
+
+    @Override
+    public String toString() {
+        return "Crime{id=%d, crime=%s description=%s}".formatted(crimeCodeId, crimeCodeName, description);
     }
 }

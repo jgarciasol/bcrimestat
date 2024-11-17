@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
 class CrimestatsApplicationTests {
@@ -19,7 +19,7 @@ class CrimestatsApplicationTests {
 	@Test
 	public void testDBConnection() {
 		Integer result = jdbcTemplate.queryForObject("SELECT 1", Integer.class);
-		assertThat(result).isNotNull();
+		assertNotNull(result, "The database connection should return a valid result");
 
 	}
 

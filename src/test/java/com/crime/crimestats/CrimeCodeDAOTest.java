@@ -10,7 +10,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
@@ -23,7 +24,7 @@ public class CrimeCodeDAOTest {
     public void testCrimeCodes(){
         List<CrimeCode> allCrimeCodes = crimeCodeDao.getAllCrimeCodes();
         System.out.println(allCrimeCodes);
-        assertThat(allCrimeCodes).isNotNull();
-        assertThat(allCrimeCodes).isNotEmpty();
+        assertNotNull(allCrimeCodes, "Should not be null");
+        assertFalse(allCrimeCodes.isEmpty(), "Crime codes list should not be empty");
     }
 }

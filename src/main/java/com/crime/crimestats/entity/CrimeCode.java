@@ -15,9 +15,7 @@ public class CrimeCode {
     public Long getCrimeCodeId(){
         return crimeCodeId;
     }
-    public String getCrimeCodeName(){
-        return crimeCodeName;
-    }
+    public String getCrimeCodeName() { return crimeCodeName;}
     public String getDescription(){
         return description;
     }

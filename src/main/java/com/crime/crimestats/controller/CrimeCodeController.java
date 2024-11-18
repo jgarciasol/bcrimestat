@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/crimecodes")
 public class CrimeCodeController {
-    private final CrimeCodeService crimeCodeService;   // Correct
+    private final CrimeCodeService crimeCodeService;
 
     @Autowired
     public CrimeCodeController(CrimeCodeService crimeCodeService) {
